@@ -12,6 +12,6 @@ jobs:
         run: npm ci
       - name: Run app
         run: npm run start &
-        wait-on: "http://localhost:3000"
+        wait-on: 'npx wait-on --timeout 60000 http://localhost:3000'
       - name: Build the stack
         run: docker-compose -f Tests/docker-compose.yml up
