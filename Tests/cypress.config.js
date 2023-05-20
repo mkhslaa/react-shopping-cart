@@ -14,5 +14,6 @@ module.exports = defineConfig({
     requestTimeout: 2000,
     defaultCommandTimeout: 5000,
     retries: 1,
+    video:false
   },
 })
