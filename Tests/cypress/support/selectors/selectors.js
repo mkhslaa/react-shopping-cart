@@ -1,0 +1,10 @@
+export const PRODUCT_STOPPER = '*[class^="Product__Stopper-"]'
+export const CART_BUTTON = '*[class^="Cart__CartButton-"] span'
+export const CART_ICON = '*[class^="Cart__CartIcon-"]'
+export const CART_QUANTITY = '*[class^="Cart__CartQuantity-"]'
+export const CART_PRODUCT_CHANGE_QUANTITY =
+  '*[class^="CartProduct__ChangeQuantity-"]'
+export const CART_PRODUCT_TITLE = '*[class^="CartProduct__Title-sc-"]'
+export const CART_PRODUCT_DESC = '*[class^="CartProduct__Desc-"]'
+export const CART_PRODUCT_PRICE = '*[class^="CartProduct__Price-sc-"] p'
+export const CART_PRODUCT_SUB_PRICE = '*[class^="Cart__SubPriceValue-sc-"]'

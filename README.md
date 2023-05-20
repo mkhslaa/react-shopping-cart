@@ -61,3 +61,9 @@ The MIT License (MIT). Please see License File for more information.
 <p align="center">
 <sub>A little project by <a href="http://www.jeffersonribeiro.com/">Jefferson Ribeiro</a></sub>
 </p>
+
+##docker command
+
+Make sure Docker Desktop is up-running if you have a Windows machine
+Make sure shopping card application is also up-running
+docker compose -f Tests/docker-compose.yml
