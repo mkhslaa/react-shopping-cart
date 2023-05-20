@@ -1,4 +1,7 @@
 name: Cypress Shopping Card Regression
+on:
+    # trigger workflow manually
+    workflow_dispatch:
 jobs:
   test:
     runs-on: ubuntu-latest
