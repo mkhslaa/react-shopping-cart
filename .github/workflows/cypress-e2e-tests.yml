@@ -1,12 +1,11 @@
-name: Cypress Shopping Card Regression 
-
+name: Cypress Shopping Card Regression
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source code
-        uses: actions/checkout@v2
+      - name: Check out repository
+        uses: actions/checkout@v3
       - name: Install
-         run: npm ci
+        run: npm ci
       - name: Build the stack
-         run: docker-compose up -f Tests/docker-compose.yml
+        run: docker-compose up -f Tests/docker-compose.yml
