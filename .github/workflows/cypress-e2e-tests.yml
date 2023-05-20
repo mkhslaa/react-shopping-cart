@@ -9,9 +9,6 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Install
-        run: npm ci
-      - name: Run app
-        run: npm run start &
-        wait-on: 'npx wait-on --timeout 60000 http://localhost:3000'
-      - name: Build the stack
-        run: docker-compose -f Tests/docker-compose.yml up
+        run: npm ci && cd cypress && npm ci
+      - name: Run app and run tests
+        run: npm run e2e:ci

@@ -29,7 +29,8 @@
     "deploy": "firebase deploy",
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
-    "format": "prettier --write \"**/*.+(ts|tsx|js|json|css)\""
+    "format": "prettier --write \"**/*.+(ts|tsx|js|json|css)\"",
+    "e2e:ci": "npm run start & wait-on http-get://localhost:3000/ && docker-compose -f Tests/docker-compose.yml up"
   },
   "jest": {
     "collectCoverageFrom": [
