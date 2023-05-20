@@ -23,14 +23,16 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --silent",
+    "test:unit": "react-scripts test --silent",
     "test:watch": "npm test -- --watch",
     "test:coverage": "npm test -- --coverage --watchAll",
     "deploy": "firebase deploy",
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
     "format": "prettier --write \"**/*.+(ts|tsx|js|json|css)\"",
-    "e2e:ci": "npm run start & && wait-on http://localhost:3000/ && docker-compose -f Tests/docker-compose.yml up"
+    "start-server": "serve -s build -l 3000",
+    "cy:run": "cd ./Tests && npx cypress run",
+    "e2e:ci": "start-server-and-test start-server http://localhost:3000 cy:run"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -84,6 +86,8 @@
     "firebase-tools": "^10.2.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.10",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "serve": "^14.2.0",
+    "start-server-and-test": "^2.0.0"
   }
 }
