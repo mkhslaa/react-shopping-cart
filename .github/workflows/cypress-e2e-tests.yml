@@ -6,6 +6,7 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v2
-      - run: npm ci
+      - name: Install
+         run: npm ci
       - name: Build the stack
-      - run: docker-compose up -f Tests/docker-compose.yml
+         run: docker-compose up -f Tests/docker-compose.yml
