@@ -20,8 +20,9 @@ jobs:
     needs: job1
     steps:
       - name: Run server
-        run: npm run start
-        echo ::set-output name=exit_code::$?
+        run: |
+          npm run start
+          echo ::set-output name=exit_code::$?
   job3:
     runs-on: ubuntu-latest
     if: always()
