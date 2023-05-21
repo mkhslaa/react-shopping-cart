@@ -10,6 +10,6 @@ jobs:
       - name: Install
         run: |
           cd Tests && 
-          npm ci
+          npm install
       - name: Run API Tests
         run: npm run cy:api
