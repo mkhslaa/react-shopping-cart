@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "cy:api": "npx cypress run --spec cypress/e2e/api-testing.cy.js --config baseUrl=https://petstore.swagger.io/"
   },
   "author": "Manjeet Khalsa",
   "license": "ISC",
