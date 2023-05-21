@@ -15,9 +15,7 @@ jobs:
           cd Tests && 
           npm ci && 
           cd .. &&
-          nohup bash -c 'npm start' &
-          sleep 10000 &&
-          curl http://localhost:3000 -I
+          npm run start-server-build
 
   job2:
     runs-on: ubuntu-latest

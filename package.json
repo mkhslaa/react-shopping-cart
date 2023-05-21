@@ -30,7 +30,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
     "format": "prettier --write \"**/*.+(ts|tsx|js|json|css)\"",
-    "start-server-not": "serve -s build -l 3000",
+    "start-server-build": "serve -s build -l 3000",
     "start-server": "nohup bash -c 'npm start' &",
     "cy:run": "cd ./Tests && npx cypress run",
     "e2e:ci:not": "start-server-and-test start http://localhost:3000 cy:run",
