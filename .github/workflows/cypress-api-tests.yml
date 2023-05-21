@@ -1,4 +1,4 @@
-name: Cypress Shopping Card Regression
+name: Cypress Api Testing Regression
 on:
   workflow_dispatch: null
 jobs:
@@ -9,10 +9,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Install
         run: |
-          npm ci && 
-          npm run build && 
           cd Tests && 
-          npm ci && 
-          cd ../
-      - name: Run Server
-        run: npm run start && npm run cy:run
+          npm ci
+      - name: Run API Tests
+        run: npm run cy:api
