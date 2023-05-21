@@ -16,7 +16,6 @@ jobs:
           npm ci && 
           cd ../
       - name: Run server
-        run: npm run start
+         run: npm run start
       - name: Run Tests
-          if:always()
          run: npm run cy:run
