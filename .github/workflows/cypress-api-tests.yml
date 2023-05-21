@@ -12,4 +12,4 @@ jobs:
           npm ci && 
           cd Tests && 
           npm ci &&
-          "npx cypress run --spec cypress/e2e/api-testing.cy.js --config baseUrl=https://petstore.swagger.io/"
+          npx cypress run --spec cypress/e2e/api-testing.cy.js --config baseUrl=https://petstore.swagger.io/
