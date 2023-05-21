@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: job1
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
       - name: Run server
         run: |
           npm run start
@@ -28,5 +30,7 @@ jobs:
     if: always()
     needs: [job1, job2]
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
       - name: Run tests
         run: npm run cy:run
