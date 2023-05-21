@@ -12,6 +12,9 @@ jobs:
           npm ci && 
           npm run build && 
           cd Tests && 
-          npm ci
+          npm ci &&
+          cd ../
       - name: Run API Tests
-        run: "npx cypress run --spec cypress/e2e/api-testing.cy.js --config baseUrl=https://petstore.swagger.io/"
+        run: |
+          cd Tests
+          "npx cypress run --spec cypress/e2e/api-testing.cy.js --config baseUrl=https://petstore.swagger.io/"
