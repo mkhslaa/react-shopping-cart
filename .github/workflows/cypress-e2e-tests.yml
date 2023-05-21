@@ -16,7 +16,7 @@ jobs:
           npm ci && 
           cd .. &&
           npm run start &
-          sleep 5 &&
+          sleep 10000 &&
           curl http://localhost:3000 -I
       - name: Run tests
         run: npm run cy:run
