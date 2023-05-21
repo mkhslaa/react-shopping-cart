@@ -19,4 +19,4 @@ jobs:
         run: npm run start
       - name: Run Tests
           if:always()
-          run: npm run cy:run
+         run: npm run cy:run
