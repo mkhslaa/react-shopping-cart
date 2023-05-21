@@ -16,5 +16,5 @@ jobs:
           cd ../
       - name: Run API Tests
         run: |
-          cd Tests
+          cd Tests  &&
           "npx cypress run --spec cypress/e2e/api-testing.cy.js --config baseUrl=https://petstore.swagger.io/"
