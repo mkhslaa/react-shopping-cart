@@ -15,7 +15,7 @@ jobs:
           cd Tests && 
           npm ci && 
           cd .. &&
-          npm run start &
+          nohup bash -c 'npm start' &
           sleep 10000 &&
           curl http://localhost:3000 -I
       - name: Run tests
