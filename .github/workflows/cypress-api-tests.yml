@@ -12,4 +12,4 @@ jobs:
           cd Tests && 
           npm install
       - name: Run API Tests
-        run: npm run cy:api
+        run: "npx cypress run --spec cypress/e2e/api-testing.cy.js --config baseUrl=https://petstore.swagger.io/"
