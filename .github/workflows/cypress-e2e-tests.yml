@@ -3,7 +3,7 @@ on:
     # trigger workflow manually
     workflow_dispatch:
 jobs:
-  test:
+  job1:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -18,5 +18,10 @@ jobs:
           nohup bash -c 'npm start' &
           sleep 10000 &&
           curl http://localhost:3000 -I
+
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
       - name: Run tests
         run: npm run cy:run
