@@ -29,8 +29,7 @@
     "deploy": "firebase deploy",
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
-    "format": "prettier --write \"**/*.+(ts|tsx|js|json|css)\"",
-    "cy:api": "npx cypress run --spec cypress/e2e/api-testing.cy.js --config baseUrl=https://petstore.swagger.io/",
+    "format": "prettier --write \"**/*.+(ts|tsx|js|json|css)\""
   },
   "jest": {
     "collectCoverageFrom": [
