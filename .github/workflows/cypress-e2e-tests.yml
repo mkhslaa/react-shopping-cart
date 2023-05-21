@@ -1,7 +1,6 @@
 name: Cypress Shopping Card Regression
 on:
-    # trigger workflow manually
-    workflow_dispatch:
+  workflow_dispatch: null
 jobs:
   job:
     runs-on: ubuntu-latest
@@ -15,7 +14,8 @@ jobs:
           cd Tests && 
           npm ci && 
           cd ../
-      - name: Run server
-         run: npm run start
-      - name: Run Tests
-         run: npm run cy:run
+      - name: Run Server
+        run: npm run start
+      - name: Run Test
+        if: always()
+        run: npm run cy:run
