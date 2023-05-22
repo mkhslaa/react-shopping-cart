@@ -62,8 +62,19 @@ The MIT License (MIT). Please see License File for more information.
 <sub>A little project by <a href="http://www.jeffersonribeiro.com/">Jefferson Ribeiro</a></sub>
 </p>
 
-##docker command
+## How to run API and UI Tests
+
+Both API and UI tests are in the Cypress folder.
+- npm ci (root folder)
+- cd Tests
+- npm ci
+- npm run start (run server in first bash terminal on VS code)
+- npx cypress open (using Cypress GUI) in the second bash terminal on VS Code, npx cypressstay in Tests folder, Choose E2E Testing, Electron, and then spec to run
+- npx cypress run (run both API and UI tests on CLI)
+- npm run cy:api (just to run API)
+
+## How to run docker command
 
 Make sure Docker Desktop is up-running if you have a Windows machine
-Make sure shopping card application is also up-running
-docker compose -f Tests/docker-compose.yml
+In the root folder, enter below command:
+docker-compose -f Tests/docker-compose.yml up

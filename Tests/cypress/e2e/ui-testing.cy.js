@@ -34,7 +34,7 @@ it('TC01- Add all Free shipping items to the cart and verify', () => {
   )
 })
 
-it('TC02- Increase a product quanity inside cart and verify', () => {
+it('TC02- Increase a product quantity inside cart and verify', () => {
   cy.visit('/')
   cy.title().should('eq', Constants.TITLE)
 
