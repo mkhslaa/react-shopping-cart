@@ -78,3 +78,8 @@ Both API and UI tests are in the Cypress folder.
 Make sure Docker Desktop is up-running if you have a Windows machine
 In the root folder, enter below command:
 docker-compose -f Tests/docker-compose.yml up
+
+## How to run GitHub Action
+
+There is a workflow file for API in .github folder
+Go to Repo, click Actions, click "Cypress Api Testing Regression", select Run workflow on right, keep Main branch, Click Run workflow.
